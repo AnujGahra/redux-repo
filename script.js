@@ -32,4 +32,4 @@ reduxState = reducer(reduxState, { type: "post/decrementBy", payload: 10 });
 console.log(reduxState);
 
 
-// 1:05:00
+// 1:05:00 more remains
