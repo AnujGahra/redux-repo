@@ -8,6 +8,18 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "description": ""
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnujGahra/redux-repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnujGahra/redux-repo/issues"
+  },
+  "homepage": "https://github.com/AnujGahra/redux-repo#readme",
+  "description": "",
+  "dependencies": {
+    "parcel": "^2.13.3",
+    "redux": "^5.0.1"
+  }
 }
