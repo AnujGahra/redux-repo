@@ -1,4 +1,5 @@
 import {createStore} from "redux"
+import { myCreateStore } from "./my-redux";
 const postCountElement = document.querySelector('.post-count')
 
 const initialState = {
@@ -56,27 +57,29 @@ function reducer(state = initialState, action) {
 
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.())
+const myStore = myCreateStore(reducer)
 console.log(store)
+console.log(myStore)
 // console.log(store.getState())
-store.subscribe(() => {
-  console.log(store.getState());
-  postCountElement.innerText = store.getState().post
+myStore.subscribe(() => {
+  console.log(myStore.getState());
+  postCountElement.innerText = myStore.getState().post
 });
 
 postCountElement.innerText = store.getState().post
 
-store.dispatch({type:INCREMENT})
+myStore.dispatch({type:INCREMENT})
 // console.log(store.getState())
-store.dispatch({type: DECREMENT})
+myStore.dispatch({type: DECREMENT})
 // console.log(store.getState())
 
-store.dispatch({type: INCREASE_BY, payload:10})
-store.dispatch({type: DECREASE_BY, payload:11})
+myStore.dispatch({type: INCREASE_BY, payload:10})
+myStore.dispatch({type: DECREASE_BY, payload:10})
 
-setTimeout(() => {
-  store.dispatch({type: INCREMENT})
-}, 2000);
+// setTimeout(() => {
+//   myStore.dispatch({type: INCREMENT})
+// }, 2000);
 
 postCountElement.addEventListener('click', () => {
-  store.dispatch({type: INCREMENT})
-})
+  myStore.dispatch({type: INCREMENT})
+});
