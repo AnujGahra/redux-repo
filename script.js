@@ -32,3 +32,6 @@ store.dispatch(decreaseItemQuantity(12))
 store.dispatch(addWishListItem(18))
 store.dispatch(removeWishListItem(18))
 console.log(store.getState());
+
+
+

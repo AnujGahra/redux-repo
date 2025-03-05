@@ -1,3 +1,9 @@
+// Ducks Pattern
+// Action Type 
+// Action Creator
+// Reducer
+
+
 
 // Action Types
 export const WISHLIST_ADD_ITEM = 'wishList/addItem'
