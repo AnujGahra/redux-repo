@@ -11,16 +11,16 @@ const reducer = combineReducers({
 })
 
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.());
+export const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.());
 
-console.log(store);
+// console.log(store);
 
-store.dispatch(addCartItem(12));
-store.dispatch(addCartItem(12, 5));
-store.dispatch(increaseItemQuantity(12));
-store.dispatch(decreaseItemQuantity(12));
+// store.dispatch(addCartItem(12));
+// store.dispatch(addCartItem(12, 5));
+// store.dispatch(increaseItemQuantity(12));
+// store.dispatch(decreaseItemQuantity(12));
 
-store.dispatch(decreaseItemQuantity(12))
+// store.dispatch(decreaseItemQuantity(12))
 
 // const a = decreaseItemQuantity(70)
 // console.log(a)
@@ -29,8 +29,8 @@ store.dispatch(decreaseItemQuantity(12))
 // store.dispatch({ type: WISHLIST_ADD_ITEM, payload: { productId: 11 } });
 // store.dispatch({ type: WISHLIST_REMOVE_ITEM, payload: { productId: 11 } });
 // store.dispatch({ type: WISHLIST_REMOVE_ITEM, payload: { productId: 18 } });
-store.dispatch(addWishListItem(18))
-store.dispatch(removeWishListItem(18))
+// store.dispatch(addWishListItem(18))
+// store.dispatch(removeWishListItem(18))
 console.log(store.getState());
 
 
